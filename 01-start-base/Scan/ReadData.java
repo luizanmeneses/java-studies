@@ -5,7 +5,7 @@ public class ReadData{
         Scanner scan = new Scanner(System.in);//Scanner it is a class that reads the input.
         scan.useLocale(java.util.Locale.US); //It is important to set the locale to US because it uses the dot as a decimal separator. Without this detail, the program not worked.
 
-       /* //Read all the line
+        //Read all the line
         System.out.println("Put your full name: ");
         String fullName = scan.nextLine();
         System.out.println("Your full name is: " + fullName);
@@ -18,7 +18,7 @@ public class ReadData{
         //Read an integer number
         System.out.println("Put your age: ");
         int age = scan.nextInt();
-        System.out.println("Your age is: " + age);*/
+        System.out.println("Your age is: " + age);
 
         //Several answers in the same question
         System.out.println("Put your informations: First name, Age, your weight, quantity of children and if you have a pet (true/false) ");
