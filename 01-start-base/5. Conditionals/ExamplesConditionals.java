@@ -8,27 +8,20 @@ public class ExamplesConditionals{
         System.out.println("\nPut a number for choice a day of the week: ");
         int weekDay = scan.nextInt();
 
-        if (weekDay == 1){
-            System.out.println("Sunday");
-        }else if (weekDay == 2){
-            System.out.println("Monday");
-        }else if (weekDay == 3){
-            System.out.println("Tuesday");
-        }else if (weekDay == 4){
-            System.out.println("Wednesday");
-        }else if (weekDay == 5){
-            System.out.println("Thursday");
-        }else if (weekDay == 6){
-            System.out.println("Friday");
-        }else if (weekDay == 7){
-            System.out.println("Saturday");
-        }else {
-            System.out.println("Number is invalid. Try again");
+        switch (weekDay) {
+            case 1 -> System.out.println("Sunday");
+            case 2 -> System.out.println("Monday");
+            case 3 -> System.out.println("Tuesday");
+            case 4 -> System.out.println("Wednesday");
+            case 5 -> System.out.println("Thursday");
+            case 6 -> System.out.println("Friday");
+            case 7 -> System.out.println("Saturday");
+            default -> System.out.println("Number is invalid. Try again");
         }
 
         //We can use the Switch-case as a alternative for if-else aligned
 
-        switch(weekDay){
+        /*switch(weekDay){
             case 1: System.out.println("Sunday"); break; //break it's like }
             case 2: System.out.println("Monday"); break;
             case 3: System.out.println("Tuesday"); break;
@@ -37,8 +30,15 @@ public class ExamplesConditionals{
             case 6: System.out.println("Friday"); break;
             case 7: System.out.println("Saturday"); break;
             default: System.out.println("Number invalid. Try again");
+        }*/
+
+        switch(weekDay){
+            case 2, 3, 4, 5, 6 -> System.out.println("Week day");
+            case 1, 7 -> System.out.println("Weekend day");
+            default -> System.out.println("Number invalid. Try again");
         }
 
+        /* or:
         switch(weekDay){
             case 2: 
             case 3: 
@@ -49,5 +49,7 @@ public class ExamplesConditionals{
             case 7: System.out.println("Weekend day"); break;
             default: System.out.println("Number invalid. Try again");
         }
+        */
+
     }
 }
