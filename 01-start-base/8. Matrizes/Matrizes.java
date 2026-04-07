@@ -27,5 +27,20 @@ public class Matrizes{
 
         //If need alter some grade
         studentsGrades[1][3] = 8;
+
+        double sum, media;
+
+        for (int i = 0; i < studentsGrades.length; i++) {
+            sum = 0; //para não acumular as somas dos outros alunos, sempre zeramos aqui. Pra recomeçar a cada novo aluno.
+            for (int j = 0; j < studentsGrades[i].length; j++){//studentsGrades[i].lenght é o tamanho da linha, neste caso, 4 pq são 4 notas
+                sum = (sum + studentsGrades[i][j]);
+            }
+            media = sum / (studentsGrades[i].length);
+            System.out.println("Total sum Student " + (i + 1) + " = " + sum);
+            System.out.println("Media Student " + (i + 1) + " = " + media);
+            
+            //System.out.print(studentsGrades[i].length);
+            
+        }
     }
 }
